@@ -7,11 +7,11 @@ import os
 load_dotenv()
 
 # Configurações de conexão com o banco de dados
-DB_HOST = 'dpg-cq69l3ss1f4s73duqalg-a.oregon-postgres.render.com'
-DB_PORT = '5432'
-DB_NAME = 'financedb_lpoj'
-DB_USER = 'user'
-DB_PASS = 'TGf3S03GatiPdmXAn1xzXicuoaeSvH2G'
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PASS = os.getenv('DB_PASS')
 
 
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
