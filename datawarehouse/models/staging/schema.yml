@@ -1,17 +1,17 @@
 version: 2
 
 sources:
-    - name:
-      schema:
-      tables:
-        - name:
+    - name: financedb_lpoj
+      schema: public
+      tables: 
+        - name: commodities
           description: "Tabela que contém dados históricos de commodities"
-          columns: Date
-          - name: Date
+          columns: 
+          - name: "True"
             description: "Data da observação"
           - name: Close
             description: "Preço de fechamento da commodity"
-          - name: simbolo
+          - name: símbolo
             description: "Símbolo da commodity"
 
         - name: movimentacao_commodities
@@ -22,6 +22,8 @@ sources:
           - name: symbol
             description: "Símbolo da commodity"
           - name: action
-            description: "Tipo da transação (buy/sell)"
+            description: "Tipo de transação (buy/sell)"
           - name: quantity
             description: "Quantidade transacionada"
+
+     
