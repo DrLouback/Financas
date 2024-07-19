@@ -1,4 +1,3 @@
-
 with commodities as (
     select 
     * from
@@ -31,18 +30,5 @@ joined as(
     on c.data = m.data
     and c.símbolo = m.simbolo
 
-),
-
-last_day as (
-    select max(data) as max_date
-    from joined
-),
-
-filtred as (
-    select *
-    from joined
-    where data = (select max_date from last_day)
 )
-
-select *
-from filtred
+select * from joined
