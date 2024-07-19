@@ -1,6 +1,6 @@
 import pandas as pd
 import yfinance as yf
-import sqlalchemy
+from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import os
 
@@ -16,7 +16,7 @@ DB_PASS = os.getenv('DB_PASS')
 
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-engine = sqlalchemy.engine.create.create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL)
 
 commodities = ['CL=F', 'GC=F', 'SI=F']
 
